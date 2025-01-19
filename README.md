@@ -10,7 +10,7 @@
 
 
 将文件压缩包下载解压后导入自己的虚拟机中即可，以Ubuntu为例
-
+详细步骤可邮箱咨询帖主：213223621@seu.edu.cn或者2153561406@qq.com
 
 
 # 实验一
@@ -55,15 +55,15 @@
 
 6. 在上面的终端中输入gedit hide_test.c，用来打开第一个实验的测试代码，并且可以修改(该终端是管理员模式，所以可以直接访问受保护文件)
 
-   ![image-20250119191612930](C:\Users\86137\AppData\Roaming\Typora\typora-user-images\image-20250119191612930.png)
+   <img src="image\image-20250119191612930.png" alt="image-20250119191612930" style="zoom: 33%;float:left" />
 
    有两个参数，pid和on，pid是你需要隐藏的进程的进程号，on可以设置为0或1，分别对应的是隐藏或不隐藏
 
    在这里比如设置pid为4000，然后保存退出
 
-7. 在终端中输入gcc hide_test.c  -o hide_test，用于将刚刚修改过的.c文件编译成可执行文件、
+8. 在终端中输入gcc hide_test.c  -o hide_test，用于将刚刚修改过的.c文件编译成可执行文件、
 
-8. 然后./hide_test执行脚本，观察下方的4000进程是否存在，
+9. 然后./hide_test执行脚本，观察下方的4000进程是否存在，
 
    <img src="image\image-20250119192143866.png" alt="image-20250119192143866" style="zoom: 50%;" />
 
@@ -75,7 +75,7 @@
 
    
 
-9. 直接执行./hide_user_test看看进程表有什么变化
+10. 直接执行./hide_user_test看看进程表有什么变化
 
    <img src="image\image-20250119192810722.png" alt="image-20250119192810722" style="zoom: 50%;float:left" />
 
@@ -83,11 +83,11 @@
 
    
 
-10. 终端输入gedit hide_user_test.c，运行发现里面有两个变量，uid和recover，uid对应要隐藏进程的用户id，里面的500对应的是你的用户seu，recover分使分别取0或1，对应隐藏或者不隐藏
+11. 终端输入gedit hide_user_test.c，运行发现里面有两个变量，uid和recover，uid对应要隐藏进程的用户id，里面的500对应的是你的用户seu，recover分使分别取0或1，对应隐藏或者不隐藏
 
     <img src="image\image-20250119193211939.png" alt="image-20250119193211939" style="zoom:50%;float:left" />
 
-11. 将recover改为1，保存退出，输入gcc hide_user_test.c -o hide_user_test将其编译成可执行文件，然后输入./hide_user_test运行观察进程表有什么变化。
+12. 将recover改为1，保存退出，输入gcc hide_user_test.c -o hide_user_test将其编译成可执行文件，然后输入./hide_user_test运行观察进程表有什么变化。
 
     <img src="image\image-20250119193818166.png" alt="image-20250119193818166" style="zoom: 40%;float:left" />
 
@@ -97,9 +97,9 @@
 
     
 
-12. 将recover设为0，也就是隐藏状态
+13. 将recover设为0，也就是隐藏状态
 
-13. 输入cd /proc，然后执行echo "0" > hidden，观察有什么效果
+14. 输入cd /proc，然后执行echo "0" > hidden，观察有什么效果
 
     <img src="image\image-20250119194453171.png" alt="image-20250119194453171" style="zoom: 50%;float:left" />
 
@@ -107,7 +107,7 @@
 
     
 
-14. 然后输入echo "1" > hidden，观察结果
+15. 然后输入echo "1" > hidden，观察结果
 
     <img src="image\image-20250119194634630.png" alt="image-20250119194634630" style="zoom:50%;float:left" />
 
@@ -115,7 +115,7 @@
 
     
 
-15. 最后是第二个选做，先echo "0" > hidden，给已有的进程截个图或者手机拍个照，记录下来之后再echo "1" > hidden回去，然后cat hidden_process，观察输出结果，发现全都是进程号，对比发现就是进程表中的进程号，这是第二个选做内容，当进程被隐藏时，有一个全局变量hidden_process，也不能算是全局变量，应该说是文件，这个文件会在进程被隐藏时，存储所有已经被隐藏的进程号，之前让你拍照是让你对应一下，确定隐藏的是你seu的进程，不过这个确定聊胜于无，到这里，实验一算正式验收完了。
+16. 最后是第二个选做，先echo "0" > hidden，给已有的进程截个图或者手机拍个照，记录下来之后再echo "1" > hidden回去，然后cat hidden_process，观察输出结果，发现全都是进程号，对比发现就是进程表中的进程号，这是第二个选做内容，当进程被隐藏时，有一个全局变量hidden_process，也不能算是全局变量，应该说是文件，这个文件会在进程被隐藏时，存储所有已经被隐藏的进程号，之前让你拍照是让你对应一下，确定隐藏的是你seu的进程，不过这个确定聊胜于无，到这里，实验一算正式验收完了。
 
     或者更简单一点，直接是echo "1" > hidden，然后cat hidden_process，再echo "0" > hidden，将cat hidden_process后打印出的进程号与下方的进程表中相对比
 
