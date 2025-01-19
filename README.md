@@ -5,6 +5,9 @@
  -实验2：Shell的实现；
  -实验3：文件系统的实现，其中实验3为选做。
  -0
+
+将文件下载后导入自己的虚拟机中即可
+ 
 # 实验一
 1.实验要求
  -
@@ -16,9 +19,13 @@
 
 2.具体实现
   -
-  -
-  -
--
+  -在seu's home中两个文件hide_user.c和hide_user_processes.c，对应两个必做的测试文件，都需要在管理员模式下运行（实验一有要求，只有管理员才可以修改）
+  -打开一个terminal终端，并进入管理员模式，该终端用来执行测试文件
+  <img width="336" alt="image" src="https://github.com/user-attachments/assets/222c0996-0a1e-435b-96af-0a0386c16d8f" />
+
+  -再打开一个terminal终端，进入后输入top-u seu，用来监看进程状态
+  -4
+  
 # 实验二
 1.实验要求
  -
