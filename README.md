@@ -37,7 +37,7 @@
 
 2. 在seu's home中两个文件hide_user.c和hide_user_processes.c，对应两个必做的测试文件，都需要在管理员模式下运行（实验一有要求，只有管理员才可以修改）
 
-3. 打开一个terminal终端，并进入管理员模式，该终端用来执行测试文件（终端位置如图  <img width="336" alt="image" src="https://github.com/user-attachments/assets/222c0996-0a1e-435b-96af-0a0386c16d8f" style="zoom:50%;float:left"  />
+3. 打开一个terminal终端，并进入管理员模式，该终端用来执行测试文件（终端位置如图  <img   src="image/222c0996-0a1e-435b-96af-0a0386c16d8f.png" alt="222c0996-0a1e-435b-96af-0a0386c16d8f" style="zoom:50%;float:left"  />
 
    <img src="image\image-20250119190723485.png" alt="image-20250119190723485" style="zoom:50%;float:left" />
 
